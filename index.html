@@ -13,6 +13,52 @@
         <div class="logo-wrapper"></div>
     </div>
     <div class="form-wrapper">
+        <form action="/httpbin.org" method="post">
+            <h1>Prepare For Battle</h1>
+            <div class="input-wrapper">
+                <div class="input-container-left">
+                    <p>
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username">
+                    </p>
+
+                    <p>
+                        <label for="civ">Civilization</label>
+                        <input list="civilizations" id="civ" name="civ">
+                        <datalist id="civilizations">
+                            <option value="abbasid">Abbasid</option>
+                            <option value="chinese">Chinese</option>
+                            <option value="delhi-sultanate">Delhi Sultanate</option>
+                            <option value="french">French</option>
+                            <option value="english">English</option>
+                            <option value="holy-roman-empire">Holy Roman Empire</option>
+                            <option value="mongols">Mongols</option>
+                            <option value="rus">Rus</option>
+                        </datalist>
+                    </p>
+                    
+                    <p>
+                        <label for="color">Color</label>
+                        <input type="color" id="color" name="color">
+                    </p>
+                </div>
+                <div class="input-container-right">
+                    <label for="civ">Civilization</label>
+                    <input list="civilizations" id="civ" name="civ">
+
+                    <datalist id="civilizations">
+                        <option value="abbasid">Abbasid</option>
+                        <option value="chinese">Chinese</option>
+                        <option value="delhi-sultanate">Delhi Sultanate</option>
+                        <option value="french">French</option>
+                        <option value="english">English</option>
+                        <option value="holy-roman-empire">Holy Roman Empire</option>
+                        <option value="mongols">Mongols</option>
+                        <option value="rus">Rus</option>
+                    </datalist>
+                </div>
+            </div>
+        </form>
     </div>
 </body>
 </html>
