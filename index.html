@@ -17,10 +17,6 @@
             <h1>Prepare For Battle</h1>
             <div class="input-wrapper">
                 <div class="input-container-left">
-                    <p>
-                        <label for="username">Username</label>
-                        <input type="text" id="username" name="username">
-                    </p>
 
                     <p>
                         <label for="civ">Civilization</label>
@@ -41,21 +37,39 @@
                         <label for="color">Color</label>
                         <input type="color" id="color" name="color">
                     </p>
+
+                    <p>
+                        <label for="opponent-civ">Opponnent Civilization</label>
+                        <input list="civilizations" id="opponent-civ" name="opponent-civ">
+                    </p>
+
+                    <p>
+                        <label for="opponent-color">Opponnent Color</label>
+                        <input type="color" id="opponent-color" name="opponent-color">
+                    </p>
+                    
                 </div>
                 <div class="input-container-right">
-                    <label for="civ">Civilization</label>
-                    <input list="civilizations" id="civ" name="civ">
+                    <p>
+                        <label for="map">Map</label>
+                        <select id="map" name="map">
+                            <option value="dry-arabia">Dry Arabia</option>
+                            <option value="mountain-clearing">Mountain Clearing</option>
+                        </select>
+                    </p>
 
-                    <datalist id="civilizations">
-                        <option value="abbasid">Abbasid</option>
-                        <option value="chinese">Chinese</option>
-                        <option value="delhi-sultanate">Delhi Sultanate</option>
-                        <option value="french">French</option>
-                        <option value="english">English</option>
-                        <option value="holy-roman-empire">Holy Roman Empire</option>
-                        <option value="mongols">Mongols</option>
-                        <option value="rus">Rus</option>
-                    </datalist>
+                    <p>
+                        <label for="map-size">Map Size</label>
+                        <select id="map-size" name="map-size">
+                            <option value="small">Small</option>
+                            <option value="large">Large</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <button type="submit" style="margin-top: 1rem">Launch Game</button>
+                    </p>
+                    
                 </div>
             </div>
         </form>
