@@ -61,3 +61,87 @@ form {
     min-height: 150px;
     width: 50%;
 }
+
+select,
+::picker(select) {
+    appearance: base-select;
+}
+
+select::picker-icon {
+    color: #999;
+    transition: 0.4s rotate;
+}
+
+select:open::picker-icon {
+    rotate: 180deg;
+}
+
+::picker(select) {
+    border: none;
+}
+
+option {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    color: white;
+
+    border: 2px solid #ddd;
+    background: #3e69b8;
+    padding: 10px;
+    transition: 0.4s;
+}
+
+option:first-of-type {
+    border-radius: 8px 8px 0 0;
+}
+
+option:last-of-type {
+    border-radius: 0 0 8px 8px;
+}
+
+option:not(option:last-of-type) {
+    border-bottom: none;
+}
+
+option:nth-of-type(odd) {
+    background: #3e69b8ee;
+}
+
+option:hover,
+option:focus {
+    background: rgb(216, 193, 91);
+}
+
+option:checked {
+    font-weight: bold;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+
+    width: 20px;
+    height: 20px;
+    /* border-radius: 10px; */
+    border: 2px solid gray;
+    vertical-align: -2px;
+    outline: none;
+}
+
+input[type="checkbox"]::before {
+    display: block;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: rgb(216, 193, 91);
+    font-size: 1.2em;
+    transform: translate(3px, 3px) scale(0);
+    transform-origin: center;
+    transition: all 0.3s ease-in;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: translate(3px, 3px) scale(1);
+    transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+}
