@@ -19,8 +19,9 @@ body {
     height: 100vh;
     justify-content: center;
     margin: 0;
-
+    font-family: 'IM FELL English PRO';
     font-weight: 0;
+    font-size: 1.2rem;
 }
 
 p {
@@ -33,7 +34,7 @@ h1 {
     margin: 0;
     margin-bottom: 30px;
     font-weight: 100;
-    font-family: 'Beyond Wonderland';
+    font-family: 'IM FELL English PRO';
 }
 
 p ~ p {
@@ -44,10 +45,23 @@ button {
     margin: 0;
 }
 
-.image-wrapper,
-.form-wrapper {
-    border: 1px solid red;
-    /* flex: auto; */
+#launch-button {
+    display: block;
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 5px 20px 5px 20px;
+    margin-top: 24px;
+    font-weight: 800;
+    background-color: rgb(216, 193, 91);
+    border-radius: 4px;
+}
+
+#launch-button:hover {
+    background-color: rgba(216, 193, 91, 0.519);
+    cursor: pointer;
 }
 
 .image-wrapper {
@@ -59,15 +73,19 @@ button {
 .content-wrapper {
     flex: 0 700px;
     position: relative;
+    display: flex;
+    /* flex-direction: column; */
+    background: rgb(31, 98, 221);
+    border-left: 2px solid black;
 }
 
 .form-wrapper {
-    border: 1px solid red;
     min-height: 100px;
     position: absolute;
-    top: 40%;
+    top: 10%;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -78,7 +96,35 @@ button {
     transform: translate(-50%, -50%);
 }
 
-img {
+.flag-wrapper {
+    display: flex;
+    flex-direction: column;
+    bottom: 0%;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.flags-row-1,
+.flags-row-2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    gap: 10px;
+}
+
+.flags {
+    flex: auto;
+    display: flex;
+    justify-content: center;
+    width: 160px;
+    height: 90px;
+}
+
+.flag {
+    width: 100%;
+}
+
+.background-img {
     width: 1500px;
     height: auto;
 }
@@ -91,14 +137,14 @@ img {
     top: 30%;
 }
 
-form {
-    border: 2px solid yellow;
-}
-
 fieldset {
-    border: 2px solid purple;
     width: 100%;
     margin: 10px;
+    background: rgb(97, 152, 254);
+}
+
+label {
+    font-weight: 800;
 }
 
 #bottom-right-fieldset {
@@ -119,7 +165,6 @@ fieldset {
 
 .input-container-left,
 .input-container-right {
-    border: 1px solid blue;
     flex-basis: 100%;
     align-items: stretch;
 }
@@ -134,8 +179,7 @@ select,
 }
 
 select::picker-icon {
-    color: #999;
-    transition: 0.4s rotate;
+    display: none;
 }
 
 select:open::picker-icon {
@@ -152,18 +196,18 @@ option {
     gap: 10px;
     color: white;
 
-    border: 2px solid #ddd;
+    /* border: 2px solid #ddd; */
     background: #3e69b8;
     padding: 10px 20px 10px 10px;
     transition: 0.4s;
 }
 
 option:first-of-type {
-    border-radius: 8px 8px 0 0;
+    /* border-radius: 8px 8px 0 0; */
 }
 
 option:last-of-type {
-    border-radius: 0 0 8px 8px;
+    /* border-radius: 0 0 8px 8px; */
 }
 
 option:not(option:last-of-type) {
@@ -197,7 +241,7 @@ input[type="checkbox"] {
     width: 16px;
     height: 16px;
     border-radius: 10px;
-    border: 1px solid gray;
+    border: 1px solid rgb(0, 0, 0);
     vertical-align: -2px;
     outline: none;
 }
@@ -223,6 +267,7 @@ input[type="checkbox"]:checked::before {
 input#lbby-name,
 input#lbby-password {
     margin-right: 20px;
+    width: 150px;
 }
 
 input + span {
@@ -251,7 +296,52 @@ input:required + span::after {
     height: 20px;
     width: 30px;
     border-radius: 4px;
-    background-color: black;
-    box-shadow: 5px 5px 10px black;
+    box-shadow: 2px 2px 5px black;
     margin: auto;
+}
+
+#blue-color-box {
+    background-color: blue;
+}
+
+#red-color-box {
+    background-color: red;
+}
+
+#yellow-color-box {
+    background-color: yellow;    
+}
+
+#green-color-box {
+    background-color: green;    
+}
+
+#teal-color-box {
+    background-color: teal;    
+}
+
+#purple-color-box {
+    background-color: purple;
+}
+
+#orange-color-box {
+    background-color: orange;
+}
+
+#pink-color-box {
+    background-color: pink;
+}
+
+selectedcontent {
+    display: flex;
+    gap: 10px;
+    padding: 5px 10px 5px 0px;
+}
+
+selectedcontent .color-box {
+    margin: 5px 0px 10px 0px;
+}
+
+#cheats-button {
+    margin-top: 20px;
 }

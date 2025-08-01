@@ -8,9 +8,7 @@
 </head>
 <body>
     <div class="image-wrapper">
-        <div class="logo-wrapper"></div>
-        <img src="images/background.jpg" alt="Adminarl Akbar commanding from the bridge.">
-        <div class="logo-wrapper"></div>
+        <img class="background-img" src="images/background.jpg" alt="Adminarl Akbar commanding from the bridge.">
     </div>
     <div class="content-wrapper">
     <div class="form-wrapper">
@@ -36,28 +34,28 @@
                                     <selectedcontent></selectedcontent>
                                 </button>
                                 <option value="">Pick your civilization</option>
-                                <option value="abbasid">
+                                <option  class="my-civ-abbasid" value="abbasid">
                                     <span class="option-label">Abbassid</span>
                                 </option>
-                                <option value="chinese">
+                                <option class="my-civ-china" value="chinese">
                                     <span class="option-label">Chinese</span>
                                 </option>
-                                <option value="delhi-sultanate">
+                                <option  class="my-civ-delhi" value="delhi-sultanate">
                                     <span class="option-label">Delhi Sultanate</span>
                                 </option>
-                                <option value="french">
+                                <option  class="my-civ-french" value="french">
                                     <span class="option-label">French</span>
                                 </option>
-                                <option value="english">
+                                <option  class="my-civ-english" value="english">
                                     <span class="option-label">English</span>
                                 </option>
-                                <option value="holy-roman-empire">
+                                <option  class="my-civ-hre" value="holy-roman-empire">
                                     <span class="option-label">Holy Roman Empire</span>
                                 </option>
-                                <option value="mongols">
+                                <option  class="my-civ-mongol" value="mongols">
                                     <span class="option-label">Mongols</span>
                                 </option>
-                                <option value="rus">
+                                <option  class="my-civ-rus" value="rus">
                                     <span class="option-label">Rus</span>
                                 </option>
                             </select>
@@ -139,10 +137,48 @@
                                 </option>
                             </select>
                         </p>
+
                         <p>
                             <label for="opponent-color">Opponent Color</label>
-                            <input type="color" id="opponent-color" name="opponent-color">
-                        </p>
+                            <select id="opponent-color-select">
+                                <button>
+                                    <selectedcontent></selectedcontent>
+                                </button>
+                                <option value="">Pick opponent color</option>
+                                <option value="blue">
+                                    <span class="option-label">Blue</span>
+                                    <div class="color-box" id="blue-color-box"></div>
+                                </option>
+                                <option value="red">
+                                    <span class="option-label">Red</span>
+                                    <div class="color-box" id="red-color-box"></div>                                    
+                                </option>
+                                <option value="yellow">
+                                    <span class="option-label">Yellow</span>
+                                    <div class="color-box" id="yellow-color-box"></div>                                    
+                                </option>
+                                <option value="green">
+                                    <span class="option-label">Green</span>
+                                    <div class="color-box" id="green-color-box"></div>                                    
+                                </option>
+                                <option value="teal">
+                                    <span class="option-label">Teal</span>
+                                    <div class="color-box" id="teal-color-box"></div>                                    
+                                </option>
+                                <option value="purple">
+                                    <span class="option-label">Purple</span>
+                                    <div class="color-box" id="purple-color-box"></div>                                    
+                                </option>
+                                <option value="orange">
+                                    <span class="option-label">Orange</span>
+                                    <div class="color-box" id="orange-color-box"></div>                                    
+                                </option>
+                                <option value="pink">
+                                    <span class="option-label">Pink</span>
+                                    <div class="color-box" id="pink-color-box"></div>                                    
+                                </option>
+                            </select>
+                        </p>                        
                     
                     </div>
                 </fieldset>
@@ -151,6 +187,10 @@
                         <p>
                             <label for="map">Map</label>
                             <select id="map" name="map">
+                                <button>
+                                    <selectedcontent></selectedcontent>
+                                </button>
+                                <option value="">Pick map</option>                                
                                 <option value="dry-arabia">Dry Arabia</option>
                                 <option value="mountain-clearing">Mountain Clearing</option>
                             </select>
@@ -158,23 +198,59 @@
                         <p>
                             <label for="map-size">Map Size</label>
                             <select id="map-size" name="map-size">
+                                <button>
+                                    <selectedcontent></selectedcontent>
+                                </button>
+                                <option value="">Pick map size</option>                                
                                 <option value="small">Small</option>
                                 <option value="large">Large</option>
                             </select>
                         </p>
-                        <p>
+                        <p id="cheats-button">
                             <label for="cheats">Cheats Enabled</label>
                             <input type="checkbox" id="cheats" name="cheats">
                         </p>
                         <p>
-                            <button type="submit">Launch Game</button>
+                            <button id="launch-button" type="submit">Launch Game</button>
                         </p>
                     
                     </div>
                 </fieldset>
             </div>
         </form>
+    
+        <div class="flag-wrapper">
+            <div class="flags-row-1">
+                <div class="flag-1 flags">
+                    <img id="abbasid-flag" class="flag" src="/flags/abbasid.png" alt="Abbasid Flag">
+                </div>
+                <div class="flag-2 flags">
+                    <img id="china-flag" class="flag" src="/flags/chinese.png" alt="Chinese Flag">
+                </div>
+                <div class="flag-3 flags">
+                    <img id="delhi-flag" src="/flags/delhi.png" alt="Delhi Sultanate Flag" class="flag">
+                </div>
+                <div class="flag-4 flags">
+                    <img id="english-flag" src="/flags/english.png" alt="English Flag" class="flag">
+                </div>
+            </div>
+            <div class="flags-row-2">
+                <div class="flag-5 flags">
+                    <img id="french-flag" src="/flags/french.png" alt="French Flag" class="flag">
+                </div>
+                <div class="flag-6 flags">
+                    <img id="hre-flag" src="/flags/hre.png" alt="Holy Roman Empire Flag" class="flag">
+                </div>
+                <div class="flag-7 flags">
+                    <img id="mongol-flag" src="/flags/mongols.png" alt="Mongol Flag" class="flag">
+                </div>
+                <div class="flag-8 flags">
+                    <img id="rus-flag" src="/flags/rus.png" alt="Rus Flag" class="flag">
+                </div>
+            </div>
+        </div>
     </div>
     </div>
+    <script src="dom.js" defer></script>
 </body>
 </html>
