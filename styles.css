@@ -5,6 +5,24 @@ body {
     margin: 0;
 }
 
+p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+p ~ p {
+    margin-top: 15px;
+}
+
+button {
+    margin: 0;
+}
+
 .image-wrapper,
 .form-wrapper {
     border: 1px solid red;
@@ -17,9 +35,19 @@ body {
     position: relative;
 }
 
-.form-wrapper {
+.content-wrapper {
     flex: 0 700px;
     position: relative;
+}
+
+.form-wrapper {
+    border: 1px solid red;
+    min-height: 100px;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .image-wrapper img {
@@ -43,24 +71,40 @@ img {
 }
 
 form {
-    border: 1px solid red;
-    min-height: 100px;
-    position: absolute;
-    top: 40%;
-    width: 100%;
+    border: 2px solid yellow;
 }
 
-.input-wrapper {
+fieldset {
+    border: 2px solid purple;
+    width: 100%;
+    margin: 10px;
+}
+
+#bottom-right-fieldset {
+    width: 70%;
+}
+
+#bottom-left-fieldset,
+#bottom-right-fieldset {
     display: flex;
     justify-content: center;
+}
+
+.input-wrapper-upper,
+.input-wrapper-lower {
+    display: flex;
+    justify-content: space-between;
 }
 
 .input-container-left,
 .input-container-right {
     border: 1px solid blue;
-    min-height: 150px;
-    width: 50%;
+    flex-basis: 100%;
+    align-items: stretch;
 }
+
+
+/* Select Dropdowns */
 
 select,
 ::picker(select) {
@@ -117,6 +161,13 @@ option:checked {
     font-weight: bold;
 }
 
+
+/* Checkbox */
+
+input#cheats {
+    margin: 0;
+}
+
 input[type="checkbox"] {
     appearance: none;
 
@@ -144,4 +195,23 @@ input[type="checkbox"]::before {
 input[type="checkbox"]:checked::before {
     transform: translate(3px, 3px) scale(1);
     transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+}
+
+input:required {
+    border: 2px solid green;
+}
+
+input + span {
+    position: relative;
+}
+
+input:required + span::after {
+    font-size: 0.7rem;
+    position: absolute;
+    content: "required";
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    top: -26px;
+    left: -70px;
 }

@@ -12,122 +12,130 @@
         <img src="images/background.jpg" alt="Adminarl Akbar commanding from the bridge.">
         <div class="logo-wrapper"></div>
     </div>
+    <div class="content-wrapper">
     <div class="form-wrapper">
         <form action="/httpbin.org" method="post">
-            <h1>Prepare For Battle</h1>
-            <div class="input-wrapper">
-                <div class="input-container-left">
-
-                    <p>
-                        <label for="civ-select">Select Civilization:</label>
-                        <select id="civ-select">
-                            <button>
-                                <selectedcontent></selectedcontent>
-                            </button>
-
-                            <option value="">Please pick your civilization</option>
-                            <option value="abbasid">
-                                <span class="option-label">Abbassid</span>
-                            </option>
-                            <option value="chinese">
-                                <span class="option-label">Chinese</span>
-                            </option>
-                            <option value="delhi-sultanate">
-                                <span class="option-label">Delhi Sultanate</span>
-                            </option>
-                            <option value="french">
-                                <span class="option-label">French</span>
-                            </option>
-                            <option value="english">
-                                <span class="option-label">English</span>
-                            </option>
-                            <option value="holy-roman-empire">
-                                <span class="option-label">Holy Roman Empire</span>
-                            </option>
-                            <option value="mongols">
-                                <span class="option-label">Mongols</span>
-                            </option>
-                            <option value="rus">
-                                <span class="option-label">Rus</span>
-                            </option>                            
-                        </select>
-                    </p>
+            <div class="input-wrapper-upper">
+                <fieldset class="lobby-fieldset">
+                    <h1>Prepare For Battle</h1>
+                    <label for="lobby-name">Lobby Name:</label>
+                    <input type="text" id="lbby-name" name="lobby-name" required>
+                    <span></span>
+                    <label for="lobby-password">Lobby Password:</label>
+                    <input type="text" id="lbby-password" name="lobby-password" required>
+                    <span></span>                
+                </fieldset>
+            </div>
+            <div class="input-wrapper-lower">
+                <fieldset id="bottom-left-fieldset">
+                    <div class="input-container-left">
+                        <p>
+                            <label for="civ-select">Civilization:</label>
+                            <select id="civ-select">
+                                <button>
+                                    <selectedcontent></selectedcontent>
+                                </button>
+                                <option value="">Pick your civilization</option>
+                                <option value="abbasid">
+                                    <span class="option-label">Abbassid</span>
+                                </option>
+                                <option value="chinese">
+                                    <span class="option-label">Chinese</span>
+                                </option>
+                                <option value="delhi-sultanate">
+                                    <span class="option-label">Delhi Sultanate</span>
+                                </option>
+                                <option value="french">
+                                    <span class="option-label">French</span>
+                                </option>
+                                <option value="english">
+                                    <span class="option-label">English</span>
+                                </option>
+                                <option value="holy-roman-empire">
+                                    <span class="option-label">Holy Roman Empire</span>
+                                </option>
+                                <option value="mongols">
+                                    <span class="option-label">Mongols</span>
+                                </option>
+                                <option value="rus">
+                                    <span class="option-label">Rus</span>
+                                </option>
+                            </select>
+                        </p>
                     
-                    <p>
-                        <label for="color">Color</label>
-                        <input type="color" id="color" name="color">
-                    </p>
-
-                    <p>
-                        <label for="opponent-civ-select">Select Opponent Civilization:</label>
-                        <select id="opponent-civ-select">
-                            <button>
-                                <selectedcontent></selectedcontent>
-                            </button>
-
-                            <option value="">Opponent civilization</option>
-                            <option value="abbasid">
-                                <span class="option-label">Abbassid</span>
-                            </option>
-                            <option value="chinese">
-                                <span class="option-label">Chinese</span>
-                            </option>
-                            <option value="delhi-sultanate">
-                                <span class="option-label">Delhi Sultanate</span>
-                            </option>
-                            <option value="french">
-                                <span class="option-label">French</span>
-                            </option>
-                            <option value="english">
-                                <span class="option-label">English</span>
-                            </option>
-                            <option value="holy-roman-empire">
-                                <span class="option-label">Holy Roman Empire</span>
-                            </option>
-                            <option value="mongols">
-                                <span class="option-label">Mongols</span>
-                            </option>
-                            <option value="rus">
-                                <span class="option-label">Rus</span>
-                            </option>                            
-                        </select>
-                    </p>
-
-                    <p>
-                        <label for="opponent-color">Opponnent Color</label>
-                        <input type="color" id="opponent-color" name="opponent-color">
-                    </p>
+                        <p>
+                            <label for="color">Color</label>
+                            <input type="color" id="color" name="color">
+                        </p>
+                        <p>
+                            <label for="opponent-civ-select">Opponent Civ:</label>
+                            <select id="opponent-civ-select">
+                                <button>
+                                    <selectedcontent></selectedcontent>
+                                </button>
+                                <option value="">Opponent civilization</option>
+                                <option value="abbasid">
+                                    <span class="option-label">Abbassid</span>
+                                </option>
+                                <option value="chinese">
+                                    <span class="option-label">Chinese</span>
+                                </option>
+                                <option value="delhi-sultanate">
+                                    <span class="option-label">Delhi Sultanate</span>
+                                </option>
+                                <option value="french">
+                                    <span class="option-label">French</span>
+                                </option>
+                                <option value="english">
+                                    <span class="option-label">English</span>
+                                </option>
+                                <option value="holy-roman-empire">
+                                    <span class="option-label">Holy Roman Empire</span>
+                                </option>
+                                <option value="mongols">
+                                    <span class="option-label">Mongols</span>
+                                </option>
+                                <option value="rus">
+                                    <span class="option-label">Rus</span>
+                                </option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="opponent-color">Opponent Color</label>
+                            <input type="color" id="opponent-color" name="opponent-color">
+                        </p>
                     
-                </div>
-                <div class="input-container-right">
-                    <p>
-                        <label for="map">Map</label>
-                        <select id="map" name="map">
-                            <option value="dry-arabia">Dry Arabia</option>
-                            <option value="mountain-clearing">Mountain Clearing</option>
-                        </select>
-                    </p>
-
-                    <p>
-                        <label for="map-size">Map Size</label>
-                        <select id="map-size" name="map-size">
-                            <option value="small">Small</option>
-                            <option value="large">Large</option>
-                        </select>
-                    </p>
-
-                    <p>
-                        <label for="cheats">Cheats Enabled</label>
-                        <input type="checkbox" id="cheats" name="cheats">
-                    </p>
-
-                    <p>
-                        <button type="submit" style="margin-top: 1rem">Launch Game</button>
-                    </p>
+                    </div>
+                </fieldset>
+                <fieldset id="bottom-right-fieldset">
+                    <div class="input-container-right">
+                        <p>
+                            <label for="map">Map</label>
+                            <select id="map" name="map">
+                                <option value="dry-arabia">Dry Arabia</option>
+                                <option value="mountain-clearing">Mountain Clearing</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="map-size">Map Size</label>
+                            <select id="map-size" name="map-size">
+                                <option value="small">Small</option>
+                                <option value="large">Large</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="cheats">Cheats Enabled</label>
+                            <input type="checkbox" id="cheats" name="cheats">
+                        </p>
+                        <p>
+                            <button type="submit">Launch Game</button>
+                        </p>
                     
-                </div>
+                    </div>
+                </fieldset>
             </div>
         </form>
+    </div>
     </div>
 </body>
 </html>
