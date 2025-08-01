@@ -1,18 +1,39 @@
+@font-face {
+    font-family: 'Beyond Wonderland';
+    src: url('fonts/BeyondWonderland.woff2') format('woff2'),
+        url('fonts/BeyondWonderland.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+
+    font-family: 'IM FELL English PRO';
+    src: url('fonts/IM_FELL_English_PRO_Roman.woff2') format('woff2'),
+        url('fonts/IM_FELL_English_PRO_Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     display: flex;
     height: 100vh;
     justify-content: center;
     margin: 0;
+
+    font-weight: 0;
 }
 
 p {
     margin: 0;
+    font-family: 'IM FELL English PRO';
 }
 
 h1 {
     font-size: 24px;
     margin: 0;
     margin-bottom: 30px;
+    font-weight: 100;
+    font-family: 'Beyond Wonderland';
 }
 
 p ~ p {
@@ -109,6 +130,7 @@ fieldset {
 select,
 ::picker(select) {
     appearance: base-select;
+    border: none;
 }
 
 select::picker-icon {
@@ -127,12 +149,12 @@ select:open::picker-icon {
 option {
     display: flex;
     justify-content: flex-start;
-    gap: 20px;
+    gap: 10px;
     color: white;
 
     border: 2px solid #ddd;
     background: #3e69b8;
-    padding: 10px;
+    padding: 10px 20px 10px 10px;
     transition: 0.4s;
 }
 
@@ -158,7 +180,7 @@ option:focus {
 }
 
 option:checked {
-    font-weight: bold;
+    font-weight: 200;
 }
 
 
@@ -166,15 +188,16 @@ option:checked {
 
 input#cheats {
     margin: 0;
+    margin-left: 5px;
 }
 
 input[type="checkbox"] {
     appearance: none;
 
-    width: 20px;
-    height: 20px;
-    /* border-radius: 10px; */
-    border: 2px solid gray;
+    width: 16px;
+    height: 16px;
+    border-radius: 10px;
+    border: 1px solid gray;
     vertical-align: -2px;
     outline: none;
 }
@@ -182,8 +205,8 @@ input[type="checkbox"] {
 input[type="checkbox"]::before {
     display: block;
     content: " ";
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 6px;
     background-color: rgb(216, 193, 91);
     font-size: 1.2em;
@@ -197,8 +220,9 @@ input[type="checkbox"]:checked::before {
     transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
 }
 
-input:required {
-    border: 2px solid green;
+input#lbby-name,
+input#lbby-password {
+    margin-right: 20px;
 }
 
 input + span {
@@ -213,5 +237,21 @@ input:required + span::after {
     background-color: black;
     padding: 5px 10px;
     top: -26px;
-    left: -70px;
+    left: -90px;
+}
+
+#blue-color-box,
+#red-color-box,
+#yellow-color-box,
+#green-color-box,
+#teal-color-box,
+#purple-color-box,
+#orange-color-box,
+#pink-color-box {
+    height: 20px;
+    width: 30px;
+    border-radius: 4px;
+    background-color: black;
+    box-shadow: 5px 5px 10px black;
+    margin: auto;
 }
