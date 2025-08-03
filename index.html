@@ -15,15 +15,27 @@
         <div class="logo-wrapper">
             <img src="/images/Age_of_Empires_IV_Logo.png" alt="Age of Empires 4 Logo" class="logo-img">
         </div>
-        <form action="/httpbin.org" method="post">
+        <form action="https://httpbin.org/post" method="post">
             <div class="input-wrapper-upper">
                 <fieldset class="lobby-fieldset">
                     <h1>Prepare For Battle</h1>
                     <label for="lobby-name">Lobby Name:</label>
-                    <input type="text" id="lbby-name" name="lobby-name" required>
+                    <input 
+                        type="text" 
+                        id="lbby-name" 
+                        name="lobby-name" 
+                        required 
+                        minlength="5" 
+                        maxlength="16">
                     <span></span>
                     <label for="lobby-password">Lobby Password:</label>
-                    <input type="text" id="lbby-password" name="lobby-password" required>
+                    <input 
+                        type="password" 
+                        id="lbby-password" 
+                        name="lobby-password" 
+                        required
+                        minlength="8" 
+                        maxlength="16">
                     <span></span>                
                 </fieldset>
             </div>
@@ -32,11 +44,11 @@
                     <div class="input-container-left">
                         <p>
                             <label for="civ-select">Civilization</label>
-                            <select id="civ-select" required>
+                            <select id="civ-select">
                                 <button>
                                     <selectedcontent></selectedcontent>
                                 </button>
-                                <option class="my-civ-random" value="">Random</option>
+                                <option class="my-civ-random" value="random">Random</option>
                                 <option class="my-civ-abbasid" value="abbasid">
                                     <span class="option-label">Abbassid</span>
                                 </option>
@@ -67,11 +79,11 @@
                         
                         <p>
                             <label for="color">Color</label>
-                            <select id="color-select" required>
+                            <select id="color-select">
                                 <button>
                                     <selectedcontent></selectedcontent>
                                 </button>
-                                <option value="">Random</option>
+                                <option value="random">Random</option>
                                 <option value="blue">
                                     <span class="option-label">Blue</span>
                                     <div id="blue-color-box"></div>
@@ -109,11 +121,11 @@
 
                         <p>
                             <label for="opponent-civ-select">Opponent Civ</label>
-                            <select id="opponent-civ-select" required>
+                            <select id="opponent-civ-select">
                                 <button>
                                     <selectedcontent></selectedcontent>
                                 </button>
-                                <option value="">Random</option>
+                                <option value="random">Random</option>
                                 <option value="abbasid">
                                     <span class="option-label">Abbassid</span>
                                 </option>
@@ -143,11 +155,11 @@
 
                         <p>
                             <label for="opponent-color">Opponent Color</label>
-                            <select id="opponent-color-select" required>
+                            <select id="opponent-color-select">
                                 <button>
                                     <selectedcontent></selectedcontent>
                                 </button>
-                                <option value="">Random</option>
+                                <option value="random">Random</option>
                                 <option value="blue">
                                     <span class="option-label">Blue</span>
                                     <div class="color-box" id="blue-color-box"></div>
@@ -193,7 +205,7 @@
                                 <button>
                                     <selectedcontent></selectedcontent>
                                 </button>
-                                <option value="">Random</option>                                
+                                <option value="">Select Map</option>                                
                                 <option value="dry-arabia">Dry Arabia</option>
                                 <option value="mountain-clearing">Mountain Clearing</option>
                             </select>
@@ -204,7 +216,7 @@
                                 <button>
                                     <selectedcontent></selectedcontent>
                                 </button>
-                                <option value="">Random</option>                                
+                                <option value="">Select Map Size</option>                                
                                 <option value="small">Small</option>
                                 <option value="large">Large</option>
                             </select>

@@ -1,5 +1,21 @@
 const goldShadow = "2px 2px 25px gold";
 
+const lobbyName = document.getElementById("lbby-name")
+lobbyName.addEventListener("invalid", () => {
+    lobbyName.setCustomValidity("Enter a lobby name between 5 and 16 characters.");
+})
+lobbyName.addEventListener("input", () => {
+    lobbyName.setCustomValidity("")
+})
+
+const lobbyPassword = document.getElementById("lbby-password")
+lobbyPassword.addEventListener("invalid", () => {
+    lobbyPassword.setCustomValidity("Enter a lobby password between 8 and 16 characters.");
+})
+lobbyPassword.addEventListener("input", () => {
+    lobbyPassword.setCustomValidity("")
+})
+
 const randomOption = document.querySelector(".my-civ-random")
 
 randomOption.addEventListener('mouseup', clearShadows)
