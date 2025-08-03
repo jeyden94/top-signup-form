@@ -75,14 +75,26 @@ button {
     position: relative;
     display: flex;
     /* flex-direction: column; */
-    background: rgb(31, 98, 221);
+    background: #22336d;
     border-left: 2px solid black;
+}
+
+.logo-wrapper {
+    width: 30%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.logo-wrapper img {
+    width: 100%;
 }
 
 .form-wrapper {
     min-height: 100px;
     position: absolute;
-    top: 10%;
+    top: 0%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -129,18 +141,11 @@ button {
     height: auto;
 }
 
-.logo-wrapper {
-    width: 100%;
-    min-height: 100px;
-    background: rgba(17, 11, 11, 0.537);
-    position: absolute;
-    top: 30%;
-}
-
 fieldset {
     width: 100%;
     margin: 10px;
-    background: rgb(97, 152, 254);
+    background: #fcf6f8;
+    border: 1px solid rgb(193, 164, 0);
 }
 
 label {

@@ -1,6 +1,11 @@
+const goldShadow = "2px 2px 25px gold";
+
+const randomOption = document.querySelector(".my-civ-random")
+
+randomOption.addEventListener('mouseup', clearShadows)
+
 const abbasidOption = document.querySelector(".my-civ-abbasid");
 const abbasidFlag = document.querySelector("#abbasid-flag");
-const goldShadow = "2px 2px 25px gold";
 
 abbasidOption.addEventListener('mouseup', addShadowAbbasid)
 

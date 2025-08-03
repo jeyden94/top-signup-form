@@ -12,6 +12,9 @@
     </div>
     <div class="content-wrapper">
     <div class="form-wrapper">
+        <div class="logo-wrapper">
+            <img src="/images/Age_of_Empires_IV_Logo.png" alt="Age of Empires 4 Logo" class="logo-img">
+        </div>
         <form action="/httpbin.org" method="post">
             <div class="input-wrapper-upper">
                 <fieldset class="lobby-fieldset">
@@ -29,12 +32,12 @@
                     <div class="input-container-left">
                         <p>
                             <label for="civ-select">Civilization</label>
-                            <select id="civ-select">
+                            <select id="civ-select" required>
                                 <button>
                                     <selectedcontent></selectedcontent>
                                 </button>
-                                <option value="">Pick your civilization</option>
-                                <option  class="my-civ-abbasid" value="abbasid">
+                                <option class="my-civ-random" value="">Random</option>
+                                <option class="my-civ-abbasid" value="abbasid">
                                     <span class="option-label">Abbassid</span>
                                 </option>
                                 <option class="my-civ-china" value="chinese">
@@ -64,11 +67,11 @@
                         
                         <p>
                             <label for="color">Color</label>
-                            <select id="color-select">
+                            <select id="color-select" required>
                                 <button>
                                     <selectedcontent></selectedcontent>
                                 </button>
-                                <option value="">Pick your color</option>
+                                <option value="">Random</option>
                                 <option value="blue">
                                     <span class="option-label">Blue</span>
                                     <div id="blue-color-box"></div>
@@ -106,11 +109,11 @@
 
                         <p>
                             <label for="opponent-civ-select">Opponent Civ</label>
-                            <select id="opponent-civ-select">
+                            <select id="opponent-civ-select" required>
                                 <button>
                                     <selectedcontent></selectedcontent>
                                 </button>
-                                <option value="">Opponent civilization</option>
+                                <option value="">Random</option>
                                 <option value="abbasid">
                                     <span class="option-label">Abbassid</span>
                                 </option>
@@ -140,11 +143,11 @@
 
                         <p>
                             <label for="opponent-color">Opponent Color</label>
-                            <select id="opponent-color-select">
+                            <select id="opponent-color-select" required>
                                 <button>
                                     <selectedcontent></selectedcontent>
                                 </button>
-                                <option value="">Pick opponent color</option>
+                                <option value="">Random</option>
                                 <option value="blue">
                                     <span class="option-label">Blue</span>
                                     <div class="color-box" id="blue-color-box"></div>
@@ -186,22 +189,22 @@
                     <div class="input-container-right">
                         <p>
                             <label for="map">Map</label>
-                            <select id="map" name="map">
+                            <select id="map" name="map" required>
                                 <button>
                                     <selectedcontent></selectedcontent>
                                 </button>
-                                <option value="">Pick map</option>                                
+                                <option value="">Random</option>                                
                                 <option value="dry-arabia">Dry Arabia</option>
                                 <option value="mountain-clearing">Mountain Clearing</option>
                             </select>
                         </p>
                         <p>
                             <label for="map-size">Map Size</label>
-                            <select id="map-size" name="map-size">
+                            <select id="map-size" name="map-size" required>
                                 <button>
                                     <selectedcontent></selectedcontent>
                                 </button>
-                                <option value="">Pick map size</option>                                
+                                <option value="">Random</option>                                
                                 <option value="small">Small</option>
                                 <option value="large">Large</option>
                             </select>
